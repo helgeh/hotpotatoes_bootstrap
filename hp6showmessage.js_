@@ -7,12 +7,14 @@ var topZ = 1000;
 function ShowMessage(Feedback){
 	var Output = Feedback + '<br /><br />';
 	document.getElementById('FeedbackContent').innerHTML = Output;
-	var FDiv = document.getElementById('FeedbackDiv');
-	topZ++;
-	FDiv.style.zIndex = topZ;
-	FDiv.style.top = TopSettingWithScrollOffset(30) + 'px';
+	// var FDiv = document.getElementById('FeedbackDiv');
+	// topZ++;
+	// FDiv.style.zIndex = topZ;
+	// FDiv.style.top = TopSettingWithScrollOffset(30) + 'px';
 
-	FDiv.style.display = 'block';
+	// FDiv.style.display = 'block';
+
+	$('.feedbackModal').modal('show');
 
 	ShowElements(false, 'input');
 	ShowElements(false, 'select');
@@ -75,7 +77,8 @@ function ShowElements(Show, TagName, ContainerToReverse){
 
 
 function HideFeedback(){
-	document.getElementById('FeedbackDiv').style.display = 'none';
+	// document.getElementById('FeedbackDiv').style.display = 'none';
+	$('.feedbackModal').modal('hide');
 	ShowElements(true, 'input');
 	ShowElements(true, 'select');
 	ShowElements(true, 'object');

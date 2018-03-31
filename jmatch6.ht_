@@ -137,11 +137,24 @@
 </div>
 [/inclReading]
 
-<div class="container">
-	<div class="Feedback" id="FeedbackDiv">
-	<div class="FeedbackText" id="FeedbackContent"></div>
-	<button id="FeedbackOKButton" class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" onclick="HideFeedback(); return false;">&nbsp;[strOKCaption]&nbsp;</button>
-	</div>
+<div class="modal fade feedbackModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Results</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+		<div class="modal-body">
+			<div class="FeedbackText" id="FeedbackContent"></div>
+		</div>
+		<div class="modal-footer">
+			<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			<button type="button" id="FeedbackOKButton" class="FuncButton btn btn-primary" onclick="HideFeedback(); return false;">&nbsp;[strOKCaption]&nbsp;</button>
+		</div>
+    </div>
+  </div>
 </div>
 
 <!-- BeginBottomNavButtons -->
