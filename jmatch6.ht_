@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+[strDublinCoreMetadata]
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>
+	[strPlainTitle] - LeonLingua
+  </title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  
+[strHeaderCode]
+
+<style type="text/css">
+
+	.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+		background: #ccc;
+		outline: 1px solid black;
+	}
+
+[__TMP__strStyleSheet]
+
+</style>
+
+<script type="text/javascript">
+
+//<![CDATA[
+
+<!--
+
+[inclScorm1.2]
+[strJSScorm_1_2]
+[/inclScorm1.2]
+
+[strJSBrowserCheck]
+
+[strJSButtons]
+
+[strJSShowMessage]
+
+[strJSUtilities]
+
+[strJSHotPotNet]
+
+[strJSJMatch6]
+
+[inclTimer]
+[strJSTimer]
+[/inclTimer]
+
+[inclSendResults]
+[strJSSendResults]
+[/inclSendResults]
+
+//-->
+
+//]]>
+
+</script>
+
+
+</head>
+
+<body onload="StartUp()" id="TheBody" [inclScorm1.2]onunload="CheckLMSFinish()"[/inclScorm1.2]>
+
+<!-- BeginTopNavButtons -->
+
+[inclNavButtons]
+[strTopNavBar]
+[/inclNavButtons]
+
+<!-- EndTopNavButtons -->
+<div class="container">
+	<div class="row">
+		<div class="Titles col-sm">
+			<h2 class="ExerciseTitle">[strExerciseTitle]</h2>
+		[inclExerciseSubtitle]
+			<h3 class="ExerciseSubtitle">[strExerciseSubtitle]</h3>
+		[/inclExerciseSubtitle]
+		[inclTimer]
+		<div id="Timer"><span id="TimerText">&nbsp;&nbsp;</span></div>
+		[/inclTimer]
+
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div id="InstructionsDiv" class="StdDiv col-sm">
+			<div id="Instructions">[strInstructions]</div>
+		</div>
+	</div>
+</div>
+
+[inclReading]
+<div class="container">
+	<div class="row">
+		<div class="LeftContainer col-sm">
+
+			<div id="Reading" class="StdDiv">
+
+				<div id="ReadingDiv">
+		[strReadingText]
+				</div>
+			</div>
+
+		</div>
+
+
+		<div class="RightContainer col-sm">
+[/inclReading]
+
+<div id="MainDiv" class="StdDiv">
+
+<button id="CheckButton1" class="FuncButton" onmouseover="FuncBtnOver(this)" onfocus="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onblur="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" onclick="CheckAnswers()">&nbsp;[strCheckCaption]&nbsp;</button>
+
+<div id="MatchDiv" style="text-align: center;">
+
+<form id="QForm" method="post" action="" onsubmit="return false;">
+<table border="0" style="margin: 2em auto 2em auto;"><tbody id="Questions">
+
+[strMatchDivItems]
+
+</tbody></table>
+</form>
+</div>
+
+<button id="CheckButton2" class="FuncButton" onmouseover="FuncBtnOver(this)" onfocus="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onblur="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" onclick="CheckAnswers()">&nbsp;[strCheckCaption]&nbsp;</button>
+
+</div>
+
+[inclReading]
+		</div>
+	</div>
+</div>
+[/inclReading]
+
+<div class="container">
+	<div class="Feedback" id="FeedbackDiv">
+	<div class="FeedbackText" id="FeedbackContent"></div>
+	<button id="FeedbackOKButton" class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" onclick="HideFeedback(); return false;">&nbsp;[strOKCaption]&nbsp;</button>
+	</div>
+</div>
+
+<!-- BeginBottomNavButtons -->
+
+[inclNavButtons]
+[strBottomNavBar]
+[/inclNavButtons]
+
+<!-- EndBottomNavButtons -->
+
+<!-- BeginSubmissionForm -->
+
+<!-- EndSubmissionForm -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
