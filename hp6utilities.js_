@@ -132,7 +132,7 @@ function Shuffle(InArray){
 }
 
 function WriteToInstructions(Feedback) {
-	document.getElementById('InstructionsDiv').innerHTML = Feedback;
+	document.getElementById('Instructions').innerHTML = Feedback;
 [inclPreloadImages]
 	RefreshImages();
 [/inclPreloadImages]
