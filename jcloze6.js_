@@ -351,7 +351,8 @@ function GetHint(GapNum){
 }
 
 function ShowHint(){
-	if (document.getElementById('FeedbackDiv').style.display == 'block'){return;}
+	// if (document.getElementById('FeedbackDiv').style.display == 'block'){return;}
+	if (document.getElementsByClassName('feedbackModal')[0].classList.contains('show')){return;}
 	if (Locked == true){return;}
 	var CurrGap = FindCurrent();
 	if (CurrGap < 0){return;}
