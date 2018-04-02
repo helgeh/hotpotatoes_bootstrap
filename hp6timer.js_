@@ -6,8 +6,10 @@ var Seconds = [intSeconds];
 var Interval = null;
 
 function StartTimer(){
+	if (document.getElementById('TimerText') == null){
+		return;
+	}
 	Interval = window.setInterval('DownTime()',1000);
-	document.getElementById('TimerText').style.display = 'inline';
 }
 
 function DownTime(){
@@ -17,10 +19,6 @@ function DownTime(){
 	}
 
 	var mm = Math.floor(Seconds / 60);
-
-	if (document.getElementById('Timer') == null){
-		return;
-	}
 
 	document.getElementById('TimerText').innerHTML = mm + ':' + ss;
 	if (Seconds < 1){

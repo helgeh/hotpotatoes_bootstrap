@@ -393,7 +393,7 @@ function DisplayExercise(StuffToDisplay){
 
 [inclTimer]
 function TimesUp() {
-	document.getElementById('Timer').innerHTML = '[strTimesUp]';
+	document.getElementById('TimerText').innerHTML = '[strTimesUp]';
 [inclPreloadImages]
 	RefreshImages();
 [/inclPreloadImages]
